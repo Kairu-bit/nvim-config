@@ -130,7 +130,7 @@ return {
   			"lua-language-server", "stylua",
   			"html-lsp", "css-lsp" , "prettier",
         "typescript-language-server", "pyright", "cssmodules-language-server",
-        "clangd", "bash-language-server", "gopls", "intelephense", "rust_analyzer",
+        "clangd", "bash-language-server", "gopls", "intelephense", "rust-analyzer",
         "solargraph", "jdtls",
   		},
   	},
