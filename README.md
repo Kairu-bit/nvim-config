@@ -33,11 +33,6 @@ If you're new to Neovim and unsure what to do, follow these steps:
 - Press Space, then type c and h to access the cheat sheet.
 - Take the time to learn these commands instead of being lazy.
 
-Once you're familiar, in normal mode, type the following and press Enter:
-``
-;MasonInstallAll
-``
-
 ## Plugins
 
 For a detailed list of plugins included in this configuration, see [Plugins](FEATURES.md).
