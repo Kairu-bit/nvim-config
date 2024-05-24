@@ -1,6 +1,6 @@
+# Neovim (NvChad) Configuration
 
-
-
+#### Welcome to my Neovim (NvChad) configuration. This setup includes a variety of plugins, key mappings, and syntax highlighting designed to enhance your coding experience.
 
 # Installation
 ## Debian
@@ -27,33 +27,6 @@ After lazy plugins installation run this nvim command:
 ``
 :MasonInstallAll
 ``
-
-# Neovim Configuration
-
-Welcome to my Neovim configuration repository. This setup includes a variety of plugins and key mappings to enhance your coding experience.
-
-## Installation
-
-1. **Clone the repository:**
-
-    ```sh
-    git clone https://github.com/yourusername/nvim-config.git ~/.config/nvim
-    ```
-
-2. **Install Packer (Plugin Manager):**
-
-    ```sh
-    git clone --depth 1 https://github.com/wbthomason/packer.nvim \
-      ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-    ```
-
-3. **Install Plugins:**
-
-    Open Neovim and run the following command to install the plugins:
-
-    ```sh
-    :PackerInstall
-    ```
 
 ## Plugins
 
@@ -112,7 +85,7 @@ The following plugins are included in this configuration:
 - **Todo Trouble**:
   - `Alt + 4`: Open TodoTrouble in normal and insert modes
 
-### Language Specific
+### Run Scripts
 
 - **Python**:
   - `Alt + 1`: Run Python script in normal and insert modes
@@ -144,10 +117,7 @@ The following plugins are included in this configuration:
 - **Java**:
   - `Alt + 1`: Compile and run Java program in normal and insert modes
 
-## Configuration Files
+## Contact Information
 
-- **`plugins.lua`**: Plugin definitions and configurations.
-- **`lspconfig.lua`**: LSP configuration.
-- **`keymappings.lua`**: Custom key mappings.
-- **`syntax_highlight.lua`**: Custom Syntax Highlighting.
-- **``
+- **[Kyle Tilano](https://www.facebook.com/KairuxDev)** on Facebook
+- **[KairuDev](https://t.me/KairuDev)** on Telegram
