@@ -148,6 +148,7 @@ return {
        "html", "css", "javascript",
        "bash", "python", "c_sharp",
         "go", "ruby", "rust", "bash",
+        "php",
   		},
   	},
   },
