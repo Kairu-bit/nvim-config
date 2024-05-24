@@ -9,7 +9,7 @@ sudo mv ~/.local/share/nvim/ ~/.local/share/nvim.bak &&
 sudo mv ~/.config/nvim/ ~/.config/nvim.bak &&
 sudo apt update -y &&
 sudo apt upgrade -y &&
-sudo apt install -y git &&
+sudo apt install -y git neovim ripgrep clang &&
 git clone https://github.com/Kairu-bit/nvim-config.git ~/.config/nvim/ &&
 nvim
 ```
@@ -19,13 +19,23 @@ mv ~/.local/share/nvim/ ~/.local/share/nvim.bak &&
 mv ~/.config/nvim/ ~/.config/nvim.bak &&
 pkg update -y &&
 pkg upgrade -y &&
-pkg install -y git &&
+pkg install -y git neovim ripgrep clang &&
 git clone https://github.com/Kairu-bit/nvim-config.git ~/.config/nvim/ &&
 nvim
 ```
-After lazy plugins installation run this nvim command:
+After the lazy plugins installation, in normal mode, type the following and press Enter:
 ``
-:MasonInstallAll
+;MasonInstallAll
+``
+
+If you're new to Neovim and unsure what to do, follow these steps:
+
+- Press Space, then type c and h to access the cheat sheet.
+- Take the time to learn these commands instead of being lazy.
+
+Once you're familiar, in normal mode, type the following and press Enter:
+``
+;MasonInstallAll
 ``
 
 ## Plugins
@@ -40,3 +50,6 @@ For a detailed list of key mappings included in this configuration, see [KeyMapp
 
 - **[Kyle Tilano](https://www.facebook.com/KairuxDev)** on Facebook
 - **[KairuDev](https://t.me/KairuDev)** on Telegram
+
+#### Soon, I will be adding support for additional programming languages, along with key mappings, plugins, and LSP for auto-completion & auto-suggestion. I'm also working on fixing syntax highlighting issues for C++, Rust, HTML, & CSS. If you have a favorite programming language that you'd like to see supported, please feel free to send me a message on Facebook or Telegram.
+
