@@ -5,7 +5,20 @@ local capabilities = require("nvchad.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
 local cmp_nvim_lsp = require'cmp_nvim_lsp'
-local servers = { "html", "cssls", "pyright", "tsserver", "jdtls", "rust_analyzer", "solargraph", "gopls", "intelephense", "clangd" }
+local servers = { 
+  "html",
+  "cssls",
+  "pyright",
+  "tsserver",
+  "jdtls",
+  "rust_analyzer",
+  "solargraph",
+  "gopls",
+  "intelephense",
+  "clangd",
+  "bashls",
+  "lua_ls"
+}
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do

@@ -1,5 +1,15 @@
 return {
   {
+    'mhartington/formatter.nvim',
+  },
+  {
+    "shellRaining/hlchunk.nvim",
+     event = { "UIEnter" },
+     config = function()
+      require("hlchunk").setup({})
+    end,
+  },
+  {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {
@@ -85,13 +95,6 @@ return {
     },
   },
   {
-    "shellRaining/hlchunk.nvim",
-     event = { "UIEnter" },
-     config = function()
-      require("hlchunk").setup({})
-    end,
-  },
-  {
     "ziontee113/icon-picker.nvim",
     config = function()
       require("icon-picker").setup({
@@ -108,7 +111,7 @@ return {
   },
   {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
+    event = 'BufWritePre', -- uncomment for format on save
     config = function()
       require "configs.conform"
     end,

@@ -1,13 +1,13 @@
 -- Setup Icon Picker
-require('icon-picker').setup({})
+require("icon-picker").setup {}
 -- Setup HLChunk
-require('hlchunk').setup({
+require("hlchunk").setup {
   exclude_filetypes = {
-    aerial = true,       -- Exclude aerial filetypes
-    dashboard = true,    -- Exclude dashboard filetypes
-    NvimTree = true,     -- Exclude NvimTree filetype
+    aerial = true, -- Exclude aerial filetypes
+    dashboard = true, -- Exclude dashboard filetypes
+    NvimTree = true, -- Exclude NvimTree filetype
   },
-  support_filetypes = {  -- Supported filetypes for HLChunk
+  support_filetypes = { -- Supported filetypes for HLChunk
     "*.lua",
     "*.js",
     "*.jsx",
@@ -21,10 +21,12 @@ require('hlchunk').setup({
     "*.php",
     "*.go",
     "*.rb",
-    "*.rs"
+    "*.rs",
   },
   indent = {
-    support_filetypes = {  -- Supported filetypes for indent
+    --uncomment the line below if you like indentation line rainbows.
+    --enable = true, --true or false
+    support_filetypes = { -- Supported filetypes for indent
       "*.lua",
       "*.js",
       "*.jsx",
@@ -40,8 +42,8 @@ require('hlchunk').setup({
       "*.php",
       "*.rs",
     },
-    chars = { "▍" },  -- Indentation characters
-    style = {         -- Indentation styles
+    chars = { "▍" }, -- Indentation characters
+    style = { -- Indentation styles
       "#00ff00",
       "#ff00ff",
       "#fff000",
@@ -51,7 +53,8 @@ require('hlchunk').setup({
     },
   },
   chunk = {
-    support_filetypes = {  -- Supported filetypes for chunk
+    enable = true, --true or false
+    support_filetypes = { -- Supported filetypes for chunk
       "*.lua",
       "*.js",
       "*.jsx",
@@ -65,32 +68,32 @@ require('hlchunk').setup({
       "*.go",
       "*.rb",
       "*.php",
-      "*.rs"
+      "*.rs",
     },
     chars = {
-        horizontal_line = "─",
-        vertical_line = "│",
-        left_top = "┌",
-        left_bottom = "└",
-        right_arrow = "─",
+      horizontal_line = "─",
+      vertical_line = "│",
+      left_top = "┌",
+      left_bottom = "└",
+      right_arrow = "─",
     },
-    style = "#00FF00",  -- Chunk style
+    style = "#00FF00", -- Chunk style
   },
   line_num = {
-    style = "#FF0000",  -- Line number style
+    style = "#FF0000", -- Line number style
   },
-})
+}
 
 -- Setup EasyColor
-require('easycolor').setup({
+require("easycolor").setup {
   default_config = {
     ui = {
-      border = "rounded",  -- Border style
+      border = "rounded", -- Border style
       symbols = {
-        selection = "󰆢",  -- Symbol to draw over selected color
-        hue_arrow = "◀"   -- Arrow next to selected hue
+        selection = "󰆢", -- Symbol to draw over selected color
+        hue_arrow = "◀", -- Arrow next to selected hue
       },
-      mappings = {  -- Key mappings
+      mappings = { -- Key mappings
         q = "close_window",
         j = "move_cursor_down",
         k = "move_cursor_up",
@@ -99,47 +102,47 @@ require('easycolor').setup({
         ["<Down>"] = "hue_down",
         ["<Up>"] = "hue_up",
         ["<Enter>"] = "insert_color",
-        t = "edit_formatting_template"
+        t = "edit_formatting_template",
       },
     },
     formatting = {
-      default_format = "$X"  -- Default formatting template
+      default_format = "$X", -- Default formatting template
     },
-  }
-})
+  },
+}
 
 -- Setup Easypick
-local easypick = require("easypick")
+local easypick = require "easypick"
 
-local base_branch = "develop"  -- Base branch for Git operations
+local base_branch = "develop" -- Base branch for Git operations
 
-easypick.setup({
+easypick.setup {
   pickers = {
     {
-      name = "ls",  -- List files picker
+      name = "ls", -- List files picker
       command = "ls",
-      previewer = easypick.previewers.default()
+      previewer = easypick.previewers.default(),
     },
     {
-      name = "changed_files",  -- Changed files picker
+      name = "changed_files", -- Changed files picker
       command = "git diff --name-only $(git merge-base HEAD " .. base_branch .. " )",
-      previewer = easypick.previewers.branch_diff({base_branch = base_branch})
+      previewer = easypick.previewers.branch_diff { base_branch = base_branch },
     },
     {
-      name = "conflicts",  -- Conflicts picker
+      name = "conflicts", -- Conflicts picker
       command = "git diff --name-only --diff-filter=U --relative",
-      previewer = easypick.previewers.file_diff()
+      previewer = easypick.previewers.file_diff(),
     },
-  }
-})
+  },
+}
 
 -- Setup TODO Comments
-require("todo-comments").setup({
+require("todo-comments").setup {
   signs = true,
   sign_priority = 8,
-  keywords = {  -- Keywords for TODO comments
+  keywords = { -- Keywords for TODO comments
     FIX = { icon = " ", color = "#DC2626", alt = { "FIXME", "BUG", "FIXIT", "ISSUE" } },
-    OUTPUT = { icon = " ", color = "#484646", alt = { "RESULT" }},
+    OUTPUT = { icon = " ", color = "#484646", alt = { "RESULT" } },
     TODO = { icon = " ", color = "#4CFBFF" },
     HACK = { icon = " ", color = "#622222" },
     WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
@@ -147,11 +150,11 @@ require("todo-comments").setup({
     NOTE = { icon = " ", color = "#3686FF", alt = { "INFO" } },
     TEST = { icon = "", color = "#FFFD03", alt = { "TESTING" } },
     PASSED = { icon = " ", color = "#00FF00" },
-    FAILED = { icon = " ", color = "#DC2626"},
+    FAILED = { icon = " ", color = "#DC2626" },
   },
   gui_style = {
-    fg = "BOLD",  -- GUI style for foreground
-    bg = "BOLD",  -- GUI style for background
+    fg = "BOLD", -- GUI style for foreground
+    bg = "BOLD", -- GUI style for background
   },
   merge_keywords = true,
   highlight = {
@@ -177,16 +180,16 @@ require("todo-comments").setup({
     },
     pattern = [[\b(KEYWORDS):]],
   },
-})
+}
 
 -- Setup Telescope
-require("telescope").setup({})
+require("telescope").setup {}
 
 -- Setup Colorizer
-require("colorizer").setup({})
+require("colorizer").setup {}
 
 -- Setup Noice
-require('noice').setup({
+require("noice").setup {
   lsp = {
     hover = {
       enabled = false,
@@ -195,10 +198,10 @@ require('noice').setup({
       enabled = false,
     },
   },
-})
+}
 
 -- Setup Nvim-Tree
-require'nvim-tree'.setup({
+require("nvim-tree").setup {
   renderer = {
     icons = {
       glyphs = {
@@ -223,63 +226,69 @@ require'nvim-tree'.setup({
       },
     },
   },
-})
+}
 
--- Additional Vim commands
-vim.cmd("DisableHL")  -- Disable normal highlighting
-vim.cmd("EnableHLChunk")  -- Enable HLChunk highlighting
+-- Utilities for creating configurations
+local util = require "formatter.util"
 
-local null_ls = require("null-ls")
+-- Provides the Format, FormatWrite, FormatLock, and FormatWriteLock commands
+require("formatter").setup {
+  -- Enable or disable logging
+  logging = true,
+  -- Set the log level
+  log_level = vim.log.levels.WARN,
+  -- All formatter configurations are opt-in
+  filetype = {
+    -- Formatter configurations for filetype "lua" go here
+    -- and will be executed in order
+    lua = {
+      -- "formatter.filetypes.lua" defines default configurations for the
+      -- "lua" filetype
+      require("formatter.filetypes.lua").stylua,
 
-local group = vim.api.nvim_create_augroup("lsp_format_on_save", { clear = false })
-local event = "BufWritePre" -- or "BufWritePost"
-local async = event == "BufWritePost"
+      -- You can also define your own configuration
+      function()
+        -- Supports conditional formatting
+        if util.get_current_buffer_file_name() == "special.lua" then
+          return nil
+        end
 
-null_ls.setup({
-  on_attach = function(client, bufnr)
-    if client.supports_method("textDocument/formatting") then
-      vim.keymap.set("n", "<Leader>f", function()
-        vim.lsp.buf.format({ bufnr = vim.api.nvim_get_current_buf() })
-      end, { buffer = bufnr, desc = "[lsp] format" })
-
-      -- format on save
-      vim.api.nvim_clear_autocmds({ buffer = bufnr, group = group })
-      vim.api.nvim_create_autocmd(event, {
-        buffer = bufnr,
-        group = group,
-        callback = function()
-          vim.lsp.buf.format({ bufnr = bufnr, async = async })
-        end,
-        desc = "[lsp] format on save",
-      })
-    end
-
-    if client.supports_method("textDocument/rangeFormatting") then
-      vim.keymap.set("x", "<Leader>f", function()
-        vim.lsp.buf.format({ bufnr = vim.api.nvim_get_current_buf() })
-      end, { buffer = bufnr, desc = "[lsp] format" })
-    end
-  end,
-})
-
-local prettier = require("prettier")
-
-prettier.setup({
-  bin = 'prettier', -- or `'prettierd'` (v0.23.3+)
-  filetypes = {
-    "css",
-    "graphql",
-    "html",
-    "javascript",
-    "javascriptreact",
-    "json",
-    "less",
-    "markdown",
-    "scss",
-    "typescript",
-    "typescriptreact",
-    "yaml",
+        -- Full specification of configurations is down below and in Vim help
+        -- files
+        return {
+          exe = "stylua",
+          args = {
+            "--search-parent-directories",
+            "--stdin-filepath",
+            util.escape_path(util.get_current_buffer_file_path()),
+            "--",
+            "-",
+          },
+          stdin = true,
+        }
+      end,
+    },
+    javascript = {
+      function()
+        return {
+          exe = "prettier",
+          args = {
+            "--stdin-filepath",
+            util.escape_path(util.get_current_buffer_file_path()), -- Pass the file path
+            "--parser",
+            "babel", -- Specify the parser for JavaScript (you can use other parsers like "flow" if needed)
+          },
+          stdin = true,
+        }
+      end,
+    },
+    -- Use the special "*" filetype for defining formatter configurations on
+    -- any filetype
+    ["*"] = {
+      -- "formatter.filetypes.any" defines default configurations for any
+      -- filetype
+      require("formatter.filetypes.any").remove_trailing_whitespace,
+    },
   },
-})
-
+}
 require("trouble").setup()

@@ -38,7 +38,6 @@ vim.schedule(function()
   require "mappings"
 end)
 
-
 -- Disable semantic tokens provider for LSP clients
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
@@ -48,11 +47,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 -- Source additional configuration files
-vim.cmd("source ~/.config/nvim/keymappings.lua")
-vim.cmd("source ~/.config/nvim/syntax_highlight.lua")
-vim.cmd("source ~/.config/nvim/plugins.lua")
+vim.cmd "source ~/.config/nvim/keymappings.lua"
+vim.cmd "source ~/.config/nvim/syntax_highlight.lua"
+vim.cmd "source ~/.config/nvim/plugins.lua"
 
--- Set line wrapping options
-vim.cmd("set nowrap")
+-- Additional Vim commands
+vim.cmd [[autocmd FileType * set nowrap]] -- Set an autocmd for all file types to disable line wrapping
+vim.cmd [[autocmd FileType * syntax enable]] -- Set an autocmd for all file types to enable syntax highlighting
 vim.opt.number = false -- Disable absolute line numbers
 vim.opt.relativenumber = false -- Disable relative line numbers

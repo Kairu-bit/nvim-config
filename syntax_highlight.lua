@@ -57,6 +57,7 @@ vim.cmd([[autocmd FileType * highlight! @variable.parameter gui=bold guifg=#ffb2
 vim.cmd([[autocmd FileType * highlight! @variable.member gui=bold guifg=#29adff]])
 vim.cmd([[autocmd FileType * highlight! @keyword.conditional gui=bold guifg=#ff4394]])
 vim.cmd([[autocmd FileType * highlight! @keyword.import guifg=#ff4394 gui=bold]])
+vim.cmd([[autocmd FileType * highlight! Search guifg=#1a1a1a]])
 
 -- C++,C,Java,C#,GoLang
 vim.cmd([[autocmd FileType cpp,c,java,cs,go highlight! @type.builtin gui=bold guifg=#ff4394]])
@@ -64,3 +65,4 @@ vim.cmd([[autocmd FileType cpp,c highlight! Type gui=bold guifg=#ff4394]])
 
 -- Java
 vim.cmd([[autocmd FileType java highlight! Type gui=bold guifg=#ffb20f]])
+

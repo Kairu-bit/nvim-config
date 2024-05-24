@@ -1,3 +1,7 @@
+
+
+
+
 # Installation
 ## Debian
 ```bash
@@ -19,3 +23,7 @@ pkg install -y git &&
 git clone https://github.com/Kairu-bit/nvim-config.git ~/.config/nvim/ &&
 nvim
 ```
+After lazy plugins installation run this nvim command:
+``
+:MasonInstallAll
+``
