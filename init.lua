@@ -47,9 +47,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 -- Source additional configuration files
-vim.cmd "source ~/.config/nvim/keymappings.lua"
-vim.cmd "source ~/.config/nvim/syntax_highlight.lua"
-vim.cmd "source ~/.config/nvim/plugins.lua"
+vim.cmd "source ~/.config/nvim/lua/configs/keymappings.lua"
+vim.cmd "source ~/.config/nvim/lua/configs/syntax_highlight.lua"
+vim.cmd "source ~/.config/nvim/lua/configs/plugins.lua"
 
 -- Additional Vim commands
 vim.cmd [[autocmd FileType * set nowrap]] -- Set an autocmd for all file types to disable line wrapping
