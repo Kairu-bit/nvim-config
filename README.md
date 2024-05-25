@@ -7,6 +7,8 @@
 ```bash
 sudo mv ~/.local/share/nvim/ ~/.local/share/nvim.bak &&
 sudo mv ~/.config/nvim/ ~/.config/nvim.bak &&
+```
+```bash
 sudo apt update -y &&
 sudo apt upgrade -y &&
 sudo apt install -y git neovim ripgrep clang &&
@@ -17,6 +19,8 @@ nvim
 ```bash
 mv ~/.local/share/nvim/ ~/.local/share/nvim.bak &&
 mv ~/.config/nvim/ ~/.config/nvim.bak &&
+```
+```bash
 pkg update -y &&
 pkg upgrade -y &&
 pkg install -y git neovim ripgrep clang &&
