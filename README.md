@@ -6,7 +6,7 @@
 ## Debian
 ```bash
 sudo mv ~/.local/share/nvim/ ~/.local/share/nvim.bak &&
-sudo mv ~/.config/nvim/ ~/.config/nvim.bak &&
+sudo mv ~/.config/nvim/ ~/.config/nvim.bak
 ```
 ```bash
 sudo apt update -y &&
@@ -18,7 +18,7 @@ nvim
 ## Termux
 ```bash
 mv ~/.local/share/nvim/ ~/.local/share/nvim.bak &&
-mv ~/.config/nvim/ ~/.config/nvim.bak &&
+mv ~/.config/nvim/ ~/.config/nvim.bak
 ```
 ```bash
 pkg update -y &&
