@@ -79,10 +79,10 @@ vim.cmd([[autocmd FileType c inoremap <buffer> <A-1> <Esc>:w<CR>:split term://gc
 vim.cmd([[autocmd FileType c nnoremap <buffer> <A-1> :w<CR>:split term://gcc % -o %:r && ./%:r<CR>]])
 
 -- Compile and run C++ program with alt 1 in insert mode for C++ files
-vim.cmd([[autocmd FileType cpp inoremap <buffer> <A-1> <Esc>:w<CR>:split term://g++ % -o %:r && ./%:r<CR>]])
+vim.cmd([[autocmd FileType cpp inoremap <buffer> <A-1> <Esc>:w<CR>:split term://g++ % && ./a.out<CR>]])
 
 -- Compile and run C++ program with alt 1 in normal mode for C++ files
-vim.cmd([[autocmd FileType cpp nnoremap <buffer> <A-1> :w<CR>:split term://g++ % -o %:r && ./%:r<CR>]])
+vim.cmd([[autocmd FileType cpp nnoremap <buffer> <A-1> :w<CR>:split term://g++ % && ./a.out<CR>]])
 
 -- Run Go program with alt 1 in normal mode for Go files
 vim.cmd([[autocmd FileType go nnoremap <buffer> <A-1> :w<CR>:split term://go run %<CR>]])

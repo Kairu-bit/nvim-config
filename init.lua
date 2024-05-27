@@ -56,3 +56,4 @@ vim.cmd [[autocmd FileType * set nowrap]] -- Set an autocmd for all file types t
 vim.cmd [[autocmd FileType * syntax enable]] -- Set an autocmd for all file types to enable syntax highlighting
 vim.opt.number = false -- Disable absolute line numbers
 vim.opt.relativenumber = false -- Disable relative line numbers
+vim.cmd("autocmd FileType python setlocal tabstop=2 shiftwidth=2 expandtab")

@@ -191,6 +191,7 @@ require("colorizer").setup {}
 -- Setup Noice
 require("noice").setup {
   lsp = {
+    enabled = false,
     hover = {
       enabled = false,
     },
