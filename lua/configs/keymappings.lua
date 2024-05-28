@@ -67,10 +67,10 @@ vim.cmd([[autocmd FileType lua inoremap <buffer> <A-1> <Esc>:w<CR>:split term://
 vim.cmd([[autocmd FileType lua nnoremap <buffer> <A-1> :w<CR>:split term://lua %<CR>]])
 
 -- Run Bash script with alt 1 in insert mode for Bash files
-vim.cmd([[autocmd FileType bash inoremap <buffer> <A-1> <Esc>:w<CR>:split term://chmod +x % && ./%<CR>]])
+vim.cmd([[autocmd FileType sh inoremap <buffer> <A-1> <Esc>:w<CR>:split term://chmod +x % && ./%<CR>]])
 
 -- Run Bash script with alt 1 in normal mode for Bash files
-vim.cmd([[autocmd FileType bash nnoremap <buffer> <A-1> :w<CR>:split term://chmod +x % && ./%<CR>]])
+vim.cmd([[autocmd FileType sh nnoremap <buffer> <A-1> :w<CR>:split term://chmod +x % && ./%<CR>]])
 
 -- Compile and run C program with alt 1 in insert mode for C files
 vim.cmd([[autocmd FileType c inoremap <buffer> <A-1> <Esc>:w<CR>:split term://gcc % -o %:r && ./%:r<CR>]])
