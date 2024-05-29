@@ -1,47 +1,50 @@
 return {
   {
-    'mhartington/formatter.nvim',
+    "mfussenegger/nvim-dap",
+  },
+  {
+    "mhartington/formatter.nvim",
   },
   {
     "shellRaining/hlchunk.nvim",
-     event = { "UIEnter" },
-     config = function()
-      require("hlchunk").setup({})
+    event = { "UIEnter" },
+    config = function()
+      require("hlchunk").setup {}
     end,
   },
   {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {
-  -- your configuration comes here
-  -- or leave it empty to use the default settings
-  -- refer to the configuration section below
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
     },
   },
   {
-    'jose-elias-alvarez/null-ls.nvim',
-    'MunifTanjim/prettier.nvim',
+    "jose-elias-alvarez/null-ls.nvim",
+    "MunifTanjim/prettier.nvim",
   },
   {
-    'norcalli/nvim-colorizer.lua',
+    "norcalli/nvim-colorizer.lua",
   },
   {
-    'gen740/SmoothCursor.nvim',
+    "gen740/SmoothCursor.nvim",
     config = function()
-      require('smoothcursor').setup()
-    end
-  },
-  {
-    "karb94/neoscroll.nvim",
-    config = function ()
-      require('neoscroll').setup {}
+      require("smoothcursor").setup()
     end,
   },
   {
-    'preservim/nerdtree',
-    'ryanoasis/vim-devicons',
+    "karb94/neoscroll.nvim",
+    config = function()
+      require("neoscroll").setup {}
+    end,
   },
---[[   {
+  {
+    "preservim/nerdtree",
+    "ryanoasis/vim-devicons",
+  },
+  --[[   {
     "jackMort/ChatGPT.nvim",
     event = "VeryLazy",
     dependencies = {
@@ -59,14 +62,14 @@ return {
     "folke/noice.nvim",
     event = "VeryLazy",
     opts = {
-    -- add any options here
+      -- add any options here
     },
     dependencies = {
-    -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
       "MunifTanjim/nui.nvim",
-    -- OPTIONAL:
-    --   `nvim-notify` is only needed, if you want to use the notification view.
-    --   If not available, we use `mini` as the fallback
+      -- OPTIONAL:
+      --   `nvim-notify` is only needed, if you want to use the notification view.
+      --   If not available, we use `mini` as the fallback
       "rcarriga/nvim-notify",
     },
   },
@@ -78,40 +81,40 @@ return {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
     },
   },
   {
-    'axkirillov/easypick.nvim',
+    "axkirillov/easypick.nvim",
   },
   {
     "neph-iap/easycolor.nvim",
     dependencies = { "stevearc/dressing.nvim" }, -- Optional, but provides better UI for editing the formatting template
     opts = {},
     keys = {
-      { "<leader>b", "<cmd>EasyColor<cr>", desc = "Color Picker" }
+      { "<leader>b", "<cmd>EasyColor<cr>", desc = "Color Picker" },
     },
   },
   {
     "ziontee113/icon-picker.nvim",
     config = function()
-      require("icon-picker").setup({
-      disable_legacy_commands = false
-    })
+      require("icon-picker").setup {
+        disable_legacy_commands = false,
+      }
     end,
   },
   {
-    'glepnir/nerdicons.nvim',
-    cmd = 'NerdIcons',
+    "glepnir/nerdicons.nvim",
+    cmd = "NerdIcons",
     config = function()
-      require('nerdicons').setup({})
+      require("nerdicons").setup {}
     end,
   },
   {
     "stevearc/conform.nvim",
-    event = 'BufWritePre', -- uncomment for format on save
+    event = "BufWritePre", -- uncomment for format on save
     config = function()
       require "configs.conform"
     end,
@@ -127,29 +130,51 @@ return {
   },
 
   {
-  	"williamboman/mason.nvim",
-  	opts = {
-  		ensure_installed = {
-  			"lua-language-server", "stylua",
-  			"html-lsp", "css-lsp" , "prettier",
-        "typescript-language-server", "pyright", "cssmodules-language-server",
-        "clangd", "bash-language-server", "gopls", "intelephense", "rust-analyzer",
-        "solargraph", "jdtls",
-  		},
-  	},
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "lua-language-server",
+        "stylua",
+        "html-lsp",
+        "css-lsp",
+        "prettier",
+        "typescript-language-server",
+        "pyright",
+        "cssmodules-language-server",
+        "clangd",
+        "bash-language-server",
+        "gopls",
+        "intelephense",
+        "rust-analyzer",
+        "solargraph",
+        "jdtls",
+      },
+    },
   },
 
   {
-  	"nvim-treesitter/nvim-treesitter",
+    "nvim-treesitter/nvim-treesitter",
     --tag = "v0.8.5.2",
-  	opts = {
-  		ensure_installed = {
-  		 "lua", "vimdoc", "c", "cpp",
-       "html", "css", "javascript",
-       "bash", "python", "c_sharp",
-        "go", "ruby", "rust", "bash",
+    opts = {
+      ensure_installed = {
+        "lua",
+        "vimdoc",
+        "c",
+        "cpp",
+        "html",
+        "css",
+        "javascript",
+        "bash",
+        "python",
+        "c_sharp",
+        "go",
+        "ruby",
+        "rust",
+        "bash",
         "php",
-  		},
-  	},
+        "markdown",
+        "json",
+      },
+    },
   },
 }

@@ -58,6 +58,38 @@ vim.cmd([[autocmd FileType * highlight! @variable.member gui=bold guifg=#29adff]
 vim.cmd([[autocmd FileType * highlight! @keyword.conditional gui=bold guifg=#ff4394]])
 vim.cmd([[autocmd FileType * highlight! @keyword.import guifg=#ff4394 gui=bold]])
 vim.cmd([[autocmd FileType * highlight! Search guifg=#1a1a1a]])
+-- Function to set terminal colors
+function SetTerminalColors()
+    vim.cmd("highlight Normal guibg=#1c1c1c guifg=#ffffff")  -- Example: dark background with white text
+    vim.cmd("highlight TermCursor guibg=#ffffff guifg=#000000")  -- Cursor color in terminal
+    vim.cmd("highlight TermCursorNC guibg=#ffffff guifg=#000000")  -- Non-active cursor color
+end
+
+-- Function to restore normal colors
+function RestoreNormalColors()
+    vim.cmd("highlight Normal guibg=#282c34 guifg=#abb2bf")  -- Replace with your normal colors
+    vim.cmd("highlight TermCursor guibg=#abb2bf guifg=#282c34")
+    vim.cmd("highlight TermCursorNC guibg=#abb2bf guifg=#282c34")
+end
+
+-- Autocommand to set terminal colors
+vim.api.nvim_create_autocmd("TermOpen", {
+    pattern = "*",
+    callback = function()
+        SetTerminalColors()
+    end
+})
+
+-- Autocommand to restore colors when leaving terminal
+vim.api.nvim_create_autocmd("BufLeave", {
+    pattern = "term://*",
+    callback = function()
+        RestoreNormalColors()
+    end
+})
+
+-- Key mapping to open a horizontal terminal split
+vim.api.nvim_set_keymap('n', '<leader>th', ':split | terminal<CR>', { noremap = true, silent = true })
 
 -- C++,C,Java,C#,GoLang
 vim.cmd([[autocmd FileType cpp,c,java,cs,go highlight! @type.builtin gui=bold guifg=#ff4394]])
