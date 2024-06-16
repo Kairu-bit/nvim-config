@@ -41,8 +41,8 @@ vim.keymap.set("i", "<A-i>", "<cmd>PickEverythingInsert<cr>", { noremap = true, 
 vim.keymap.set("n", "<A-2>", "<cmd>EasyColor<cr>", { noremap = true, silent = true })
 
 -- Open Trouble in insert mode & normal mode with alt 3
-vim.keymap.set("n", "<A-3>", "<cmd>TroubleToggle<cr>", { noremap = true, silent = true })
-vim.keymap.set("i", "<A-3>", "<esc><cmd>TroubleToggle<cr>", { noremap = true, silent = true })
+vim.keymap.set("n", "<A-3>", "<cmd>Trouble<cr>", { noremap = true, silent = true })
+vim.keymap.set("i", "<A-3>", "<esc><cmd>Trouble<cr>", { noremap = true, silent = true })
 
 -- Open TodoTrouble in insert mode & normal mode with alt 4
 vim.keymap.set("n", "<A-4>", "<cmd>TodoTrouble<cr>", { noremap = true, silent = true })

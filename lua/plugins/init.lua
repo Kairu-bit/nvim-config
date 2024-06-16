@@ -1,9 +1,12 @@
 return {
   {
-    "mfussenegger/nvim-dap",
+    "nvim-neotest/nvim-nio",
   },
   {
-    "mhartington/formatter.nvim",
+    "mfussenegger/nvim-dap",
+    config = function ()
+      require "configs.dap"
+    end
   },
   {
     "shellRaining/hlchunk.nvim",
@@ -22,7 +25,6 @@ return {
     },
   },
   {
-    "jose-elias-alvarez/null-ls.nvim",
     "MunifTanjim/prettier.nvim",
   },
   {
@@ -148,6 +150,7 @@ return {
         "rust-analyzer",
         "solargraph",
         "jdtls",
+        "js-debug-adapter",
       },
     },
   },
@@ -174,6 +177,7 @@ return {
         "php",
         "markdown",
         "json",
+        "sql",
       },
     },
   },
